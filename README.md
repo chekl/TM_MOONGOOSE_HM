@@ -14,14 +14,14 @@
 
 - `GET /users/` - to get all users with the ability to sort them by age (query parameters: `?age=1` - for ascending; `?age=-1` - for descending). Return only user id, fullName, email and age fields.
 - `GET /users/:id` - Retrieve a specific user by their id (Also contain all articles that user created, only title, subtitle and created date fields).
-- `POST /users/` - Add a new user. Required parameters: 'firstName', 'lastName', 'email', 'password', 'age', 'address', 'tags'.
+- `POST /users/` - Add a new user. Required parameters: 'firstName', 'lastName', 'email', 'password'.
 - `PUT /users/:id` - Update a user's data (firstName, lastName, age).
 - `DELETE /users/:id` - Delete a user by id and all articles that he created.
 
 ## Articles
 
 - `GET /articles` - Retrieve articles with owner's data (fullName, email and age fields). Also pagination was provided (?limit=5 - limit for one page (by default 5); ?page=0 - number of page (by default 0, that is first page))
-- `POST /articles` - Add a new article. Required parameters: 'name', 'description', 'type', 'tags'.
+- `POST /articles` - Add a new article. Required parameters: 'title', 'description', 'owner', 'category'.
 - `PUT /articles/:name` - Update an article. Only owner can update the article. Query password is required
 - `DELETE /users/:id` - Delete an article by id. Only owner can delete the article. Query password is required
 
